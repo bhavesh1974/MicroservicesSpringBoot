@@ -1,9 +1,0 @@
-/.metadata/
-/.recommenders/
-RemoteSystemsTempFiles/.project
-*.log
-*.log
-gatewayservice/gatewayservice.log
-*.gz
-*.jar
-*.MF
