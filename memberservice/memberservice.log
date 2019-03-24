@@ -1,49 +1,467 @@
-2019-03-23 00:03:23 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver -   - Resolving eureka endpoints via configuration
-2019-03-23 00:08:23 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver -   - Resolving eureka endpoints via configuration
-2019-03-23 00:28:25 [restartedMain] INFO  c.b.m.MemberserviceApplication -   - No active profile set, falling back to default profiles: default
-2019-03-23 00:28:28 [restartedMain] INFO  o.a.catalina.core.StandardService -   - Starting service [Tomcat]
-2019-03-23 00:28:28 [restartedMain] INFO  o.a.catalina.core.StandardEngine -   - Starting Servlet engine: [Apache Tomcat/9.0.16]
-2019-03-23 00:28:28 [restartedMain] INFO  o.a.c.core.AprLifecycleListener -   - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_171\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_171/bin/server;C:/Program Files/Java/jre1.8.0_171/bin;C:/Program Files/Java/jre1.8.0_171/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\nodejs\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files\MySQL\MySQL Server 5.5\bin;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\PuTTY\;C:\Program Files (x86)\scala\bin;C:\hadoop-2.8.4\bin;C:\cygwin64\bin;C:\Tools\apache-tomcat-8.5.27\bin;C:\Users\bhave\AppData\Local\Android\Sdk;C:\Users\bhave\AppData\Local\Android\Sdk\platform-tools;C:\Users\bhave\AppData\Local\Android\Sdk\tools;C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\bin;C:\Program Files\Git\cmd;C:\Learning\ELK\sqljdbc_4.2.8112.200_enu\sqljdbc_4.2\enu\jre8\sqljdbc42.jar;C:\Learning\ELK\sqljdbc_4.2\enu\auth\x64\sqljdbc_auth.dll;C:\Program Files\Amazon\AWSCLI\bin\;C:\Python\Scripts\;C:\Python\;C:\Users\bhave\AppData\Local\Microsoft\WindowsApps;C:\Users\bhave\AppData\Roaming\npm;C:\Program Files\Microsoft VS Code\bin;C:\Users\bhave\AppData\Local\GitHubDesktop\bin;C:\WINDOWS\system32;;.]
-2019-03-23 00:28:28 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -   - Initializing Spring embedded WebApplicationContext
-2019-03-23 00:28:28 [restartedMain] WARN  c.n.c.sources.URLConfigurationSource -   - No URLs will be polled as dynamic configuration sources.
-2019-03-23 00:28:28 [restartedMain] INFO  c.n.c.sources.URLConfigurationSource -   - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2019-03-23 00:28:28 [restartedMain] INFO  c.n.config.DynamicPropertyFactory -   - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@237378e9
-2019-03-23 00:28:31 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -   - HikariPool-1 - Starting...
-2019-03-23 00:28:31 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -   - HikariPool-1 - Start completed.
-2019-03-23 00:28:31 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper -   - HHH000204: Processing PersistenceUnitInfo [
+2019-03-24 14:55:12 [restartedMain] INFO  c.b.m.MemberserviceApplication -   - No active profile set, falling back to default profiles: default
+2019-03-24 14:55:16 [restartedMain] INFO  o.a.catalina.core.StandardService -   - Starting service [Tomcat]
+2019-03-24 14:55:16 [restartedMain] INFO  o.a.catalina.core.StandardEngine -   - Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-24 14:55:16 [restartedMain] INFO  o.a.c.core.AprLifecycleListener -   - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_171\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_171/bin/server;C:/Program Files/Java/jre1.8.0_171/bin;C:/Program Files/Java/jre1.8.0_171/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\nodejs\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files\MySQL\MySQL Server 5.5\bin;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\PuTTY\;C:\Program Files (x86)\scala\bin;C:\hadoop-2.8.4\bin;C:\cygwin64\bin;C:\Tools\apache-tomcat-8.5.27\bin;C:\Users\bhave\AppData\Local\Android\Sdk;C:\Users\bhave\AppData\Local\Android\Sdk\platform-tools;C:\Users\bhave\AppData\Local\Android\Sdk\tools;C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\bin;C:\Program Files\Git\cmd;C:\Learning\ELK\sqljdbc_4.2.8112.200_enu\sqljdbc_4.2\enu\jre8\sqljdbc42.jar;C:\Learning\ELK\sqljdbc_4.2\enu\auth\x64\sqljdbc_auth.dll;C:\Program Files\Amazon\AWSCLI\bin\;C:\Python\Scripts\;C:\Python\;C:\Users\bhave\AppData\Local\Microsoft\WindowsApps;C:\Users\bhave\AppData\Roaming\npm;C:\Program Files\Microsoft VS Code\bin;C:\Users\bhave\AppData\Local\GitHubDesktop\bin;C:\WINDOWS\system32;;.]
+2019-03-24 14:55:16 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -   - Initializing Spring embedded WebApplicationContext
+2019-03-24 14:55:16 [restartedMain] WARN  c.n.c.sources.URLConfigurationSource -   - No URLs will be polled as dynamic configuration sources.
+2019-03-24 14:55:16 [restartedMain] INFO  c.n.c.sources.URLConfigurationSource -   - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-03-24 14:55:16 [restartedMain] INFO  c.n.config.DynamicPropertyFactory -   - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@4757e931
+2019-03-24 14:55:18 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -   - HikariPool-1 - Starting...
+2019-03-24 14:55:19 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -   - HikariPool-1 - Start completed.
+2019-03-24 14:55:19 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper -   - HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2019-03-23 00:28:31 [restartedMain] INFO  org.hibernate.Version -   - HHH000412: Hibernate Core {5.3.7.Final}
-2019-03-23 00:28:31 [restartedMain] INFO  org.hibernate.cfg.Environment -   - HHH000206: hibernate.properties not found
-2019-03-23 00:28:31 [restartedMain] INFO  o.h.annotations.common.Version -   - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
-2019-03-23 00:28:32 [restartedMain] INFO  org.hibernate.dialect.Dialect -   - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2019-03-23 00:28:32 [restartedMain] WARN  c.n.c.sources.URLConfigurationSource -   - No URLs will be polled as dynamic configuration sources.
-2019-03-23 00:28:32 [restartedMain] INFO  c.n.c.sources.URLConfigurationSource -   - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2019-03-23 00:28:35 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Initializing Eureka in region us-east-1
-2019-03-23 00:28:35 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider -   - Using JSON encoding codec LegacyJacksonJson
-2019-03-23 00:28:35 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider -   - Using JSON decoding codec LegacyJacksonJson
-2019-03-23 00:28:36 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider -   - Using XML encoding codec XStreamXml
-2019-03-23 00:28:36 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider -   - Using XML decoding codec XStreamXml
-2019-03-23 00:28:36 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver -   - Resolving eureka endpoints via configuration
-2019-03-23 00:28:36 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Disable delta property : false
-2019-03-23 00:28:36 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Single vip registry refresh property : null
-2019-03-23 00:28:36 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Force full registry fetch : false
-2019-03-23 00:28:36 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Application is null : false
-2019-03-23 00:28:36 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Registered Applications size is zero : true
-2019-03-23 00:28:36 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Application version is -1: true
-2019-03-23 00:28:36 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Getting all instance registry info from the eureka server
-2019-03-23 00:28:36 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - The response status is 200
-2019-03-23 00:28:36 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Starting heartbeat executor: renew interval is: 30
-2019-03-23 00:28:36 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator -   - InstanceInfoReplicator onDemand update allowed rate per min is 4
-2019-03-23 00:28:36 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Discovery Client initialized at timestamp 1553281116912 with initial instances count: 1
-2019-03-23 00:28:36 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Saw local status change event StatusChangeEvent [timestamp=1553281116920, current=UP, previous=STARTING]
-2019-03-23 00:28:36 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient -   - DiscoveryClient_MEMBER-SERVICE/localhost:member-service:3002: registering service...
-2019-03-23 00:28:37 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient -   - DiscoveryClient_MEMBER-SERVICE/localhost:member-service:3002 - registration status: 204
-2019-03-23 00:28:37 [restartedMain] INFO  c.b.m.MemberserviceApplication -   - Started MemberserviceApplication in 15.329 seconds (JVM running for 16.064)
-2019-03-23 00:33:36 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver -   - Resolving eureka endpoints via configuration
-2019-03-23 00:38:36 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver -   - Resolving eureka endpoints via configuration
-2019-03-23 00:41:58 [http-nio-3002-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -   - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-03-23 00:41:58 [http-nio-3002-exec-1] INFO  MembmerService -  a098295e-d542-42d7-be57-eb5676b4b19b - Request Received.
-2019-03-23 00:41:58 [http-nio-3002-exec-1] INFO  MembmerService -  a098295e-d542-42d7-be57-eb5676b4b19b - Request Completed.
-2019-03-23 00:43:36 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver -   - Resolving eureka endpoints via configuration
-2019-03-23 00:48:36 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver -   - Resolving eureka endpoints via configuration
+2019-03-24 14:55:19 [restartedMain] INFO  org.hibernate.Version -   - HHH000412: Hibernate Core {5.3.7.Final}
+2019-03-24 14:55:19 [restartedMain] INFO  org.hibernate.cfg.Environment -   - HHH000206: hibernate.properties not found
+2019-03-24 14:55:19 [restartedMain] INFO  o.h.annotations.common.Version -   - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-03-24 14:55:19 [restartedMain] INFO  org.hibernate.dialect.Dialect -   - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-03-24 14:55:20 [restartedMain] WARN  c.n.c.sources.URLConfigurationSource -   - No URLs will be polled as dynamic configuration sources.
+2019-03-24 14:55:20 [restartedMain] INFO  c.n.c.sources.URLConfigurationSource -   - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-03-24 14:55:23 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Initializing Eureka in region us-east-1
+2019-03-24 14:55:24 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider -   - Using JSON encoding codec LegacyJacksonJson
+2019-03-24 14:55:24 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider -   - Using JSON decoding codec LegacyJacksonJson
+2019-03-24 14:55:24 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider -   - Using XML encoding codec XStreamXml
+2019-03-24 14:55:24 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider -   - Using XML decoding codec XStreamXml
+2019-03-24 14:55:24 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver -   - Resolving eureka endpoints via configuration
+2019-03-24 14:55:25 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Disable delta property : false
+2019-03-24 14:55:25 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Single vip registry refresh property : null
+2019-03-24 14:55:25 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Force full registry fetch : false
+2019-03-24 14:55:25 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Application is null : false
+2019-03-24 14:55:25 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Registered Applications size is zero : true
+2019-03-24 14:55:25 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Application version is -1: true
+2019-03-24 14:55:25 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Getting all instance registry info from the eureka server
+2019-03-24 14:55:25 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - The response status is 200
+2019-03-24 14:55:25 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Starting heartbeat executor: renew interval is: 30
+2019-03-24 14:55:25 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator -   - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-03-24 14:55:25 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Discovery Client initialized at timestamp 1553419525374 with initial instances count: 0
+2019-03-24 14:55:25 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Saw local status change event StatusChangeEvent [timestamp=1553419525421, current=UP, previous=STARTING]
+2019-03-24 14:55:25 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient -   - DiscoveryClient_MEMBER-SERVICE/localhost:member-service:3002: registering service...
+2019-03-24 14:55:25 [restartedMain] INFO  c.b.m.MemberserviceApplication -   - Started MemberserviceApplication in 16.505 seconds (JVM running for 17.2)
+2019-03-24 14:55:25 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient -   - DiscoveryClient_MEMBER-SERVICE/localhost:member-service:3002 - registration status: 204
+2019-03-24 14:55:55 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient -   - Disable delta property : false
+2019-03-24 14:55:55 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient -   - Single vip registry refresh property : null
+2019-03-24 14:55:55 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient -   - Force full registry fetch : false
+2019-03-24 14:55:55 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient -   - Application is null : false
+2019-03-24 14:55:55 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient -   - Registered Applications size is zero : true
+2019-03-24 14:55:55 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient -   - Application version is -1: false
+2019-03-24 14:55:55 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient -   - Getting all instance registry info from the eureka server
+2019-03-24 14:55:55 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient -   - The response status is 200
+2019-03-24 14:57:40 [http-nio-3002-exec-9] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -   - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-24 14:57:40 [http-nio-3002-exec-9] INFO  MembmerService -  d5426ec5-0e25-46d1-bd58-272710ca52f9 - Request Received.
+2019-03-24 14:57:41 [http-nio-3002-exec-9] INFO  MembmerService -  d5426ec5-0e25-46d1-bd58-272710ca52f9 - Request Completed.
+2019-03-24 14:57:48 [http-nio-3002-exec-6] INFO  MembmerService -  e98aa8f7-3a1a-4687-ae33-e22b9a87bdf2 - Request Received.
+2019-03-24 14:57:48 [http-nio-3002-exec-6] INFO  MembmerService -  e98aa8f7-3a1a-4687-ae33-e22b9a87bdf2 - Request Completed.
+2019-03-24 15:00:25 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver -   - Resolving eureka endpoints via configuration
+2019-03-24 15:03:08 [http-nio-3002-exec-5] INFO  MembmerService -   - Request Received.
+2019-03-24 15:03:08 [http-nio-3002-exec-5] INFO  MembmerService -   - Request Completed.
+2019-03-24 15:05:25 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver -   - Resolving eureka endpoints via configuration
+2019-03-24 15:10:25 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver -   - Resolving eureka endpoints via configuration
+2019-03-24 15:15:25 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver -   - Resolving eureka endpoints via configuration
+2019-03-24 15:20:25 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver -   - Resolving eureka endpoints via configuration
+2019-03-24 17:02:07 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool -   - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h39m47s279ms330µs310ns).
+2019-03-24 17:04:45 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver -   - Resolving eureka endpoints via configuration
+2019-03-24 17:09:45 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver -   - Resolving eureka endpoints via configuration
+2019-03-24 17:09:50 [http-nio-3002-exec-4] INFO  MembmerService -  a02d2b5c-d55e-4c33-a015-ea62ef5a3c1b - Request Received.
+2019-03-24 17:09:50 [http-nio-3002-exec-4] INFO  MembmerService -  a02d2b5c-d55e-4c33-a015-ea62ef5a3c1b - Request Completed.
+2019-03-24 17:11:59 [http-nio-3002-exec-3] INFO  MembmerService -  9e4eb71c-5192-462d-b13a-7fb2fe8c89c2 - Request Received.
+2019-03-24 17:11:59 [http-nio-3002-exec-3] INFO  MembmerService -  9e4eb71c-5192-462d-b13a-7fb2fe8c89c2 - Request Completed.
+2019-03-24 17:14:11 [http-nio-3002-exec-1] INFO  MembmerService -  57337462-9767-403b-a849-4ebb403e019e - Request Received.
+2019-03-24 17:14:11 [http-nio-3002-exec-1] INFO  MembmerService -  57337462-9767-403b-a849-4ebb403e019e - Request Completed.
+2019-03-24 17:14:45 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver -   - Resolving eureka endpoints via configuration
+2019-03-24 17:19:45 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver -   - Resolving eureka endpoints via configuration
+2019-03-24 17:20:38 [http-nio-3002-exec-6] INFO  MembmerService -  13a38cac-e8ef-451d-b23a-eabab7339af2 - Request Received.
+2019-03-24 17:20:38 [http-nio-3002-exec-6] INFO  MembmerService -  13a38cac-e8ef-451d-b23a-eabab7339af2 - Request Completed.
+2019-03-24 17:23:20 [http-nio-3002-exec-5] INFO  MembmerService -  136bb10f-29e2-406f-b92c-d31da4282ae5 - Request Received.
+2019-03-24 17:23:20 [http-nio-3002-exec-5] INFO  MembmerService -  136bb10f-29e2-406f-b92c-d31da4282ae5 - Request Completed.
+2019-03-24 17:24:45 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver -   - Resolving eureka endpoints via configuration
+2019-03-24 17:25:02 [http-nio-3002-exec-4] INFO  MembmerService -  b506c61d-474a-4adf-846f-cc62e61e8520 - Request Received.
+2019-03-24 17:25:02 [http-nio-3002-exec-4] INFO  MembmerService -  b506c61d-474a-4adf-846f-cc62e61e8520 - Request Completed.
+2019-03-24 17:25:24 [http-nio-3002-exec-8] INFO  MembmerService -  ccd8e787-a854-4463-b368-db452b70255d - Request Received.
+2019-03-24 17:25:24 [http-nio-3002-exec-8] INFO  MembmerService -  ccd8e787-a854-4463-b368-db452b70255d - Request Completed.
+2019-03-24 17:25:29 [http-nio-3002-exec-3] INFO  MembmerService -  76eda6a8-da78-4886-8163-c9467981bde3 - Request Received.
+2019-03-24 17:25:29 [http-nio-3002-exec-3] INFO  MembmerService -  76eda6a8-da78-4886-8163-c9467981bde3 - Request Completed.
+2019-03-24 17:26:21 [http-nio-3002-exec-2] INFO  MembmerService -  4b4f7add-7002-410e-a529-3cb941111815 - Request Received.
+2019-03-24 17:26:21 [http-nio-3002-exec-2] INFO  MembmerService -  4b4f7add-7002-410e-a529-3cb941111815 - Request Completed.
+2019-03-24 17:26:59 [http-nio-3002-exec-1] INFO  MembmerService -  c5359f54-5465-420a-b2d9-046efe973572 - Request Received.
+2019-03-24 17:26:59 [http-nio-3002-exec-1] INFO  MembmerService -  c5359f54-5465-420a-b2d9-046efe973572 - Request Completed.
+2019-03-24 17:29:11 [http-nio-3002-exec-6] INFO  MembmerService -  81cfaa1b-86f6-49b3-b6d5-6cccf33f2adb - Request Received.
+2019-03-24 17:29:11 [http-nio-3002-exec-6] INFO  MembmerService -  81cfaa1b-86f6-49b3-b6d5-6cccf33f2adb - Request Completed.
+2019-03-24 17:29:51 [restartedMain] INFO  c.b.m.MemberserviceApplication -   - No active profile set, falling back to default profiles: default
+2019-03-24 17:29:54 [restartedMain] INFO  o.a.catalina.core.StandardService -   - Starting service [Tomcat]
+2019-03-24 17:29:54 [restartedMain] INFO  o.a.catalina.core.StandardEngine -   - Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-24 17:29:54 [restartedMain] INFO  o.a.c.core.AprLifecycleListener -   - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_171\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_171/bin/server;C:/Program Files/Java/jre1.8.0_171/bin;C:/Program Files/Java/jre1.8.0_171/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\nodejs\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files\MySQL\MySQL Server 5.5\bin;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\PuTTY\;C:\Program Files (x86)\scala\bin;C:\hadoop-2.8.4\bin;C:\cygwin64\bin;C:\Tools\apache-tomcat-8.5.27\bin;C:\Users\bhave\AppData\Local\Android\Sdk;C:\Users\bhave\AppData\Local\Android\Sdk\platform-tools;C:\Users\bhave\AppData\Local\Android\Sdk\tools;C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\bin;C:\Program Files\Git\cmd;C:\Learning\ELK\sqljdbc_4.2.8112.200_enu\sqljdbc_4.2\enu\jre8\sqljdbc42.jar;C:\Learning\ELK\sqljdbc_4.2\enu\auth\x64\sqljdbc_auth.dll;C:\Program Files\Amazon\AWSCLI\bin\;C:\Python\Scripts\;C:\Python\;C:\Users\bhave\AppData\Local\Microsoft\WindowsApps;C:\Users\bhave\AppData\Roaming\npm;C:\Program Files\Microsoft VS Code\bin;C:\Users\bhave\AppData\Local\GitHubDesktop\bin;C:\WINDOWS\system32;;.]
+2019-03-24 17:29:54 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -   - Initializing Spring embedded WebApplicationContext
+2019-03-24 17:29:54 [restartedMain] WARN  c.n.c.sources.URLConfigurationSource -   - No URLs will be polled as dynamic configuration sources.
+2019-03-24 17:29:54 [restartedMain] INFO  c.n.c.sources.URLConfigurationSource -   - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-03-24 17:29:54 [restartedMain] INFO  c.n.config.DynamicPropertyFactory -   - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@12242402
+2019-03-24 17:29:57 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -   - HikariPool-1 - Starting...
+2019-03-24 17:29:57 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -   - HikariPool-1 - Start completed.
+2019-03-24 17:29:57 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper -   - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-03-24 17:29:57 [restartedMain] INFO  org.hibernate.Version -   - HHH000412: Hibernate Core {5.3.7.Final}
+2019-03-24 17:29:57 [restartedMain] INFO  org.hibernate.cfg.Environment -   - HHH000206: hibernate.properties not found
+2019-03-24 17:29:57 [restartedMain] INFO  o.h.annotations.common.Version -   - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-03-24 17:29:57 [restartedMain] INFO  org.hibernate.dialect.Dialect -   - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-03-24 17:29:58 [restartedMain] WARN  c.n.c.sources.URLConfigurationSource -   - No URLs will be polled as dynamic configuration sources.
+2019-03-24 17:29:58 [restartedMain] INFO  c.n.c.sources.URLConfigurationSource -   - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-03-24 17:30:00 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Initializing Eureka in region us-east-1
+2019-03-24 17:30:01 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider -   - Using JSON encoding codec LegacyJacksonJson
+2019-03-24 17:30:01 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider -   - Using JSON decoding codec LegacyJacksonJson
+2019-03-24 17:30:01 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider -   - Using XML encoding codec XStreamXml
+2019-03-24 17:30:01 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider -   - Using XML decoding codec XStreamXml
+2019-03-24 17:30:01 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver -   - Resolving eureka endpoints via configuration
+2019-03-24 17:30:02 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Disable delta property : false
+2019-03-24 17:30:02 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Single vip registry refresh property : null
+2019-03-24 17:30:02 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Force full registry fetch : false
+2019-03-24 17:30:02 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Application is null : false
+2019-03-24 17:30:02 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Registered Applications size is zero : true
+2019-03-24 17:30:02 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Application version is -1: true
+2019-03-24 17:30:02 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Getting all instance registry info from the eureka server
+2019-03-24 17:30:02 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - The response status is 200
+2019-03-24 17:30:02 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Starting heartbeat executor: renew interval is: 30
+2019-03-24 17:30:02 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator -   - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-03-24 17:30:02 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Discovery Client initialized at timestamp 1553428802347 with initial instances count: 3
+2019-03-24 17:30:02 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Saw local status change event StatusChangeEvent [timestamp=1553428802355, current=UP, previous=STARTING]
+2019-03-24 17:30:02 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient -   - DiscoveryClient_MEMBER-SERVICE/localhost:member-service:3002: registering service...
+2019-03-24 17:30:02 [restartedMain] INFO  c.b.m.MemberserviceApplication -   - Started MemberserviceApplication in 14.664 seconds (JVM running for 15.402)
+2019-03-24 17:30:02 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient -   - DiscoveryClient_MEMBER-SERVICE/localhost:member-service:3002 - registration status: 204
+2019-03-24 17:32:22 [restartedMain] INFO  c.b.m.MemberserviceApplication -   - No active profile set, falling back to default profiles: default
+2019-03-24 17:32:26 [restartedMain] INFO  o.a.catalina.core.StandardService -   - Starting service [Tomcat]
+2019-03-24 17:32:26 [restartedMain] INFO  o.a.catalina.core.StandardEngine -   - Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-24 17:32:26 [restartedMain] INFO  o.a.c.core.AprLifecycleListener -   - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_171\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_171/bin/server;C:/Program Files/Java/jre1.8.0_171/bin;C:/Program Files/Java/jre1.8.0_171/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\nodejs\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files\MySQL\MySQL Server 5.5\bin;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\PuTTY\;C:\Program Files (x86)\scala\bin;C:\hadoop-2.8.4\bin;C:\cygwin64\bin;C:\Tools\apache-tomcat-8.5.27\bin;C:\Users\bhave\AppData\Local\Android\Sdk;C:\Users\bhave\AppData\Local\Android\Sdk\platform-tools;C:\Users\bhave\AppData\Local\Android\Sdk\tools;C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\bin;C:\Program Files\Git\cmd;C:\Learning\ELK\sqljdbc_4.2.8112.200_enu\sqljdbc_4.2\enu\jre8\sqljdbc42.jar;C:\Learning\ELK\sqljdbc_4.2\enu\auth\x64\sqljdbc_auth.dll;C:\Program Files\Amazon\AWSCLI\bin\;C:\Python\Scripts\;C:\Python\;C:\Users\bhave\AppData\Local\Microsoft\WindowsApps;C:\Users\bhave\AppData\Roaming\npm;C:\Program Files\Microsoft VS Code\bin;C:\Users\bhave\AppData\Local\GitHubDesktop\bin;C:\WINDOWS\system32;;.]
+2019-03-24 17:32:26 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -   - Initializing Spring embedded WebApplicationContext
+2019-03-24 17:32:26 [restartedMain] WARN  c.n.c.sources.URLConfigurationSource -   - No URLs will be polled as dynamic configuration sources.
+2019-03-24 17:32:26 [restartedMain] INFO  c.n.c.sources.URLConfigurationSource -   - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-03-24 17:32:26 [restartedMain] INFO  c.n.config.DynamicPropertyFactory -   - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@5de46af5
+2019-03-24 17:32:28 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -   - HikariPool-1 - Starting...
+2019-03-24 17:32:28 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -   - HikariPool-1 - Start completed.
+2019-03-24 17:32:29 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper -   - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-03-24 17:32:29 [restartedMain] INFO  org.hibernate.Version -   - HHH000412: Hibernate Core {5.3.7.Final}
+2019-03-24 17:32:29 [restartedMain] INFO  org.hibernate.cfg.Environment -   - HHH000206: hibernate.properties not found
+2019-03-24 17:32:29 [restartedMain] INFO  o.h.annotations.common.Version -   - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-03-24 17:32:29 [restartedMain] INFO  org.hibernate.dialect.Dialect -   - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-03-24 17:32:29 [restartedMain] WARN  c.n.c.sources.URLConfigurationSource -   - No URLs will be polled as dynamic configuration sources.
+2019-03-24 17:32:29 [restartedMain] INFO  c.n.c.sources.URLConfigurationSource -   - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-03-24 17:32:32 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Initializing Eureka in region us-east-1
+2019-03-24 17:32:33 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider -   - Using JSON encoding codec LegacyJacksonJson
+2019-03-24 17:32:33 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider -   - Using JSON decoding codec LegacyJacksonJson
+2019-03-24 17:32:33 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider -   - Using XML encoding codec XStreamXml
+2019-03-24 17:32:33 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider -   - Using XML decoding codec XStreamXml
+2019-03-24 17:32:33 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver -   - Resolving eureka endpoints via configuration
+2019-03-24 17:32:33 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Disable delta property : false
+2019-03-24 17:32:33 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Single vip registry refresh property : null
+2019-03-24 17:32:33 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Force full registry fetch : false
+2019-03-24 17:32:33 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Application is null : false
+2019-03-24 17:32:33 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Registered Applications size is zero : true
+2019-03-24 17:32:33 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Application version is -1: true
+2019-03-24 17:32:33 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Getting all instance registry info from the eureka server
+2019-03-24 17:32:34 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - The response status is 200
+2019-03-24 17:32:34 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Starting heartbeat executor: renew interval is: 30
+2019-03-24 17:32:34 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator -   - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-03-24 17:32:34 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Discovery Client initialized at timestamp 1553428954067 with initial instances count: 0
+2019-03-24 17:32:34 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Saw local status change event StatusChangeEvent [timestamp=1553428954113, current=UP, previous=STARTING]
+2019-03-24 17:32:34 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient -   - DiscoveryClient_MEMBER-SERVICE/localhost:member-service:3002: registering service...
+2019-03-24 17:32:34 [restartedMain] INFO  c.b.m.MemberserviceApplication -   - Started MemberserviceApplication in 15.419 seconds (JVM running for 16.104)
+2019-03-24 17:32:34 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient -   - DiscoveryClient_MEMBER-SERVICE/localhost:member-service:3002 - registration status: 204
+2019-03-24 17:33:04 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient -   - Disable delta property : false
+2019-03-24 17:33:04 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient -   - Single vip registry refresh property : null
+2019-03-24 17:33:04 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient -   - Force full registry fetch : false
+2019-03-24 17:33:04 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient -   - Application is null : false
+2019-03-24 17:33:04 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient -   - Registered Applications size is zero : true
+2019-03-24 17:33:04 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient -   - Application version is -1: false
+2019-03-24 17:33:04 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient -   - Getting all instance registry info from the eureka server
+2019-03-24 17:33:04 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient -   - The response status is 200
+2019-03-24 17:33:26 [http-nio-3002-exec-10] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -   - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-24 17:33:26 [http-nio-3002-exec-10] INFO  MembmerService -  133aaa4a-7fd2-4b65-81a7-a780bc093832 - Request Received.
+2019-03-24 17:33:27 [http-nio-3002-exec-10] INFO  MembmerService -  133aaa4a-7fd2-4b65-81a7-a780bc093832 - Request Completed.
+2019-03-24 17:33:34 [http-nio-3002-exec-9] INFO  MembmerService -  417aca1b-1efc-4a59-9b97-1f08344467a9 - Request Received.
+2019-03-24 17:33:34 [http-nio-3002-exec-9] INFO  MembmerService -  417aca1b-1efc-4a59-9b97-1f08344467a9 - Request Completed.
+2019-03-24 17:37:33 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver -   - Resolving eureka endpoints via configuration
+2019-03-24 17:39:20 [http-nio-3002-exec-7] INFO  MembmerService -  7dbc7936-7031-46ea-bc4c-d2ffea9fe92c - Request Received.
+2019-03-24 17:39:20 [http-nio-3002-exec-7] INFO  MembmerService -  7dbc7936-7031-46ea-bc4c-d2ffea9fe92c - Request Completed.
+2019-03-24 17:39:38 [http-nio-3002-exec-6] INFO  MembmerService -  a0742575-797d-4640-b1c8-21a1dcdaf032 - Request Received.
+2019-03-24 17:39:38 [http-nio-3002-exec-6] INFO  MembmerService -  a0742575-797d-4640-b1c8-21a1dcdaf032 - Request Completed.
+2019-03-24 17:39:38 [http-nio-3002-exec-6] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] -  a0742575-797d-4640-b1c8-21a1dcdaf032 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IndexOutOfBoundsException: Index: 0, Size: 0] with root cause
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source) ~[na:1.8.0_171]
+	at java.util.ArrayList.get(Unknown Source) ~[na:1.8.0_171]
+	at com.bhaveshshah.memberservice.dao.impl.MemberDaoImpl.get(MemberDaoImpl.java:19) ~[classes/:na]
+	at com.bhaveshshah.memberservice.dao.impl.MemberDaoImpl.get(MemberDaoImpl.java:1) ~[classes/:na]
+	at com.bhaveshshah.memberservice.dao.impl.MemberDaoImpl$$FastClassBySpringCGLIB$$254bd239.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749) ~[spring-aop-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688) ~[spring-aop-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at com.bhaveshshah.memberservice.dao.impl.MemberDaoImpl$$EnhancerBySpringCGLIB$$9ad76711.get(<generated>) ~[classes/:na]
+	at com.bhaveshshah.memberservice.controller.ServiceController.get(ServiceController.java:48) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_171]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_171]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_171]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_171]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.boot.actuate.web.trace.servlet.HttpTraceFilter.doFilterInternal(HttpTraceFilter.java:90) ~[spring-boot-actuator-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.filterAndRecordMetrics(WebMvcMetricsFilter.java:117) ~[spring-boot-actuator-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:106) ~[spring-boot-actuator-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_171]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_171]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_171]
+2019-03-24 17:39:38 [http-nio-3002-exec-6] INFO  MembmerService -  a0742575-797d-4640-b1c8-21a1dcdaf032 - Request Received.
+2019-03-24 17:39:38 [http-nio-3002-exec-6] INFO  MembmerService -  a0742575-797d-4640-b1c8-21a1dcdaf032 - Request Completed.
+2019-03-24 17:40:23 [http-nio-3002-exec-5] INFO  MembmerService -  1cab6058-5021-460f-bb74-b4dcfe487efa - Request Received.
+2019-03-24 17:40:23 [http-nio-3002-exec-5] INFO  MembmerService -  1cab6058-5021-460f-bb74-b4dcfe487efa - Request Completed.
+2019-03-24 17:40:23 [http-nio-3002-exec-5] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] -  1cab6058-5021-460f-bb74-b4dcfe487efa - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IndexOutOfBoundsException: Index: 0, Size: 0] with root cause
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source) ~[na:1.8.0_171]
+	at java.util.ArrayList.get(Unknown Source) ~[na:1.8.0_171]
+	at com.bhaveshshah.memberservice.dao.impl.MemberDaoImpl.get(MemberDaoImpl.java:19) ~[classes/:na]
+	at com.bhaveshshah.memberservice.dao.impl.MemberDaoImpl.get(MemberDaoImpl.java:1) ~[classes/:na]
+	at com.bhaveshshah.memberservice.dao.impl.MemberDaoImpl$$FastClassBySpringCGLIB$$254bd239.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749) ~[spring-aop-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688) ~[spring-aop-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at com.bhaveshshah.memberservice.dao.impl.MemberDaoImpl$$EnhancerBySpringCGLIB$$9ad76711.get(<generated>) ~[classes/:na]
+	at com.bhaveshshah.memberservice.controller.ServiceController.get(ServiceController.java:48) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_171]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_171]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_171]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_171]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.boot.actuate.web.trace.servlet.HttpTraceFilter.doFilterInternal(HttpTraceFilter.java:90) ~[spring-boot-actuator-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.filterAndRecordMetrics(WebMvcMetricsFilter.java:117) ~[spring-boot-actuator-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:106) ~[spring-boot-actuator-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_171]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_171]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_171]
+2019-03-24 17:40:23 [http-nio-3002-exec-5] INFO  MembmerService -  1cab6058-5021-460f-bb74-b4dcfe487efa - Request Received.
+2019-03-24 17:40:23 [http-nio-3002-exec-5] INFO  MembmerService -  1cab6058-5021-460f-bb74-b4dcfe487efa - Request Completed.
+2019-03-24 17:41:35 [Thread-1] WARN  c.netflix.discovery.DiscoveryClient -   - Saw local status change event StatusChangeEvent [timestamp=1553429495532, current=DOWN, previous=UP]
+2019-03-24 17:41:35 [Thread-1] INFO  c.netflix.discovery.DiscoveryClient -   - Shutting down DiscoveryClient ...
+2019-03-24 17:41:35 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient -   - DiscoveryClient_MEMBER-SERVICE/localhost:member-service:3002: registering service...
+2019-03-24 17:41:35 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient -   - DiscoveryClient_MEMBER-SERVICE/localhost:member-service:3002 - registration status: 204
+2019-03-24 17:41:35 [Thread-1] INFO  c.netflix.discovery.DiscoveryClient -   - Unregistering ...
+2019-03-24 17:41:35 [Thread-1] INFO  c.netflix.discovery.DiscoveryClient -   - DiscoveryClient_MEMBER-SERVICE/localhost:member-service:3002 - deregister  status: 200
+2019-03-24 17:41:35 [Thread-1] INFO  c.netflix.discovery.DiscoveryClient -   - Completed shut down of DiscoveryClient
+2019-03-24 17:41:35 [Thread-1] INFO  com.zaxxer.hikari.HikariDataSource -   - HikariPool-1 - Shutdown initiated...
+2019-03-24 17:41:35 [Thread-1] INFO  com.zaxxer.hikari.HikariDataSource -   - HikariPool-1 - Shutdown completed.
+2019-03-24 17:41:39 [restartedMain] INFO  c.b.m.MemberserviceApplication -   - No active profile set, falling back to default profiles: default
+2019-03-24 17:41:40 [restartedMain] INFO  o.a.catalina.core.StandardService -   - Starting service [Tomcat]
+2019-03-24 17:41:40 [restartedMain] INFO  o.a.catalina.core.StandardEngine -   - Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-24 17:41:40 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -   - Initializing Spring embedded WebApplicationContext
+2019-03-24 17:41:42 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -   - HikariPool-2 - Starting...
+2019-03-24 17:41:42 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -   - HikariPool-2 - Start completed.
+2019-03-24 17:41:42 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper -   - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-03-24 17:41:42 [restartedMain] INFO  org.hibernate.dialect.Dialect -   - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-03-24 17:41:42 [restartedMain] WARN  c.n.c.sources.URLConfigurationSource -   - No URLs will be polled as dynamic configuration sources.
+2019-03-24 17:41:42 [restartedMain] INFO  c.n.c.sources.URLConfigurationSource -   - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-03-24 17:41:44 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Initializing Eureka in region us-east-1
+2019-03-24 17:41:44 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider -   - Using JSON encoding codec LegacyJacksonJson
+2019-03-24 17:41:44 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider -   - Using JSON decoding codec LegacyJacksonJson
+2019-03-24 17:41:44 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider -   - Using XML encoding codec XStreamXml
+2019-03-24 17:41:44 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider -   - Using XML decoding codec XStreamXml
+2019-03-24 17:41:44 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver -   - Resolving eureka endpoints via configuration
+2019-03-24 17:41:44 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Disable delta property : false
+2019-03-24 17:41:44 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Single vip registry refresh property : null
+2019-03-24 17:41:44 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Force full registry fetch : false
+2019-03-24 17:41:44 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Application is null : false
+2019-03-24 17:41:44 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Registered Applications size is zero : true
+2019-03-24 17:41:44 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Application version is -1: true
+2019-03-24 17:41:44 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Getting all instance registry info from the eureka server
+2019-03-24 17:41:44 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - The response status is 200
+2019-03-24 17:41:44 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Starting heartbeat executor: renew interval is: 30
+2019-03-24 17:41:44 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator -   - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-03-24 17:41:44 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Discovery Client initialized at timestamp 1553429504443 with initial instances count: 3
+2019-03-24 17:41:44 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Saw local status change event StatusChangeEvent [timestamp=1553429504443, current=UP, previous=STARTING]
+2019-03-24 17:41:44 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient -   - DiscoveryClient_MEMBER-SERVICE/localhost:member-service:3002: registering service...
+2019-03-24 17:41:44 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient -   - DiscoveryClient_MEMBER-SERVICE/localhost:member-service:3002 - registration status: 204
+2019-03-24 17:41:44 [restartedMain] INFO  c.b.m.MemberserviceApplication -   - Started MemberserviceApplication in 8.303 seconds (JVM running for 566.311)
+2019-03-24 17:41:46 [http-nio-3002-exec-10] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -   - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-24 17:41:46 [http-nio-3002-exec-10] INFO  MembmerService -  bf1c2372-6bee-4bb4-8180-13b2c1bcad09 - Request Received.
+2019-03-24 17:41:47 [http-nio-3002-exec-10] INFO  MembmerService -  bf1c2372-6bee-4bb4-8180-13b2c1bcad09 - Request Completed.
+2019-03-24 17:42:22 [Thread-13] WARN  c.netflix.discovery.DiscoveryClient -   - Saw local status change event StatusChangeEvent [timestamp=1553429542376, current=DOWN, previous=UP]
+2019-03-24 17:42:22 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient -   - DiscoveryClient_MEMBER-SERVICE/localhost:member-service:3002: registering service...
+2019-03-24 17:42:22 [Thread-13] INFO  c.netflix.discovery.DiscoveryClient -   - Shutting down DiscoveryClient ...
+2019-03-24 17:42:22 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient -   - DiscoveryClient_MEMBER-SERVICE/localhost:member-service:3002 - registration status: 204
+2019-03-24 17:42:22 [Thread-13] INFO  c.netflix.discovery.DiscoveryClient -   - Unregistering ...
+2019-03-24 17:42:22 [Thread-13] INFO  c.netflix.discovery.DiscoveryClient -   - DiscoveryClient_MEMBER-SERVICE/localhost:member-service:3002 - deregister  status: 200
+2019-03-24 17:42:22 [Thread-13] INFO  c.netflix.discovery.DiscoveryClient -   - Completed shut down of DiscoveryClient
+2019-03-24 17:42:22 [Thread-13] INFO  com.zaxxer.hikari.HikariDataSource -   - HikariPool-2 - Shutdown initiated...
+2019-03-24 17:42:22 [Thread-13] INFO  com.zaxxer.hikari.HikariDataSource -   - HikariPool-2 - Shutdown completed.
+2019-03-24 17:42:25 [restartedMain] INFO  c.b.m.MemberserviceApplication -   - No active profile set, falling back to default profiles: default
+2019-03-24 17:42:26 [restartedMain] INFO  o.a.catalina.core.StandardService -   - Starting service [Tomcat]
+2019-03-24 17:42:26 [restartedMain] INFO  o.a.catalina.core.StandardEngine -   - Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-24 17:42:26 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -   - Initializing Spring embedded WebApplicationContext
+2019-03-24 17:42:28 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -   - HikariPool-3 - Starting...
+2019-03-24 17:42:28 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -   - HikariPool-3 - Start completed.
+2019-03-24 17:42:28 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper -   - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-03-24 17:42:28 [restartedMain] INFO  org.hibernate.dialect.Dialect -   - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-03-24 17:42:28 [restartedMain] WARN  c.n.c.sources.URLConfigurationSource -   - No URLs will be polled as dynamic configuration sources.
+2019-03-24 17:42:28 [restartedMain] INFO  c.n.c.sources.URLConfigurationSource -   - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-03-24 17:42:30 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Initializing Eureka in region us-east-1
+2019-03-24 17:42:30 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider -   - Using JSON encoding codec LegacyJacksonJson
+2019-03-24 17:42:30 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider -   - Using JSON decoding codec LegacyJacksonJson
+2019-03-24 17:42:30 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider -   - Using XML encoding codec XStreamXml
+2019-03-24 17:42:30 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider -   - Using XML decoding codec XStreamXml
+2019-03-24 17:42:30 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver -   - Resolving eureka endpoints via configuration
+2019-03-24 17:42:30 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Disable delta property : false
+2019-03-24 17:42:30 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Single vip registry refresh property : null
+2019-03-24 17:42:30 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Force full registry fetch : false
+2019-03-24 17:42:30 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Application is null : false
+2019-03-24 17:42:30 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Registered Applications size is zero : true
+2019-03-24 17:42:30 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Application version is -1: true
+2019-03-24 17:42:30 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Getting all instance registry info from the eureka server
+2019-03-24 17:42:30 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - The response status is 200
+2019-03-24 17:42:30 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Starting heartbeat executor: renew interval is: 30
+2019-03-24 17:42:30 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator -   - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-03-24 17:42:30 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Discovery Client initialized at timestamp 1553429550798 with initial instances count: 2
+2019-03-24 17:42:30 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient -   - Saw local status change event StatusChangeEvent [timestamp=1553429550798, current=UP, previous=STARTING]
+2019-03-24 17:42:30 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient -   - DiscoveryClient_MEMBER-SERVICE/localhost:member-service:3002: registering service...
+2019-03-24 17:42:30 [restartedMain] INFO  c.b.m.MemberserviceApplication -   - Started MemberserviceApplication in 7.754 seconds (JVM running for 612.66)
+2019-03-24 17:42:30 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient -   - DiscoveryClient_MEMBER-SERVICE/localhost:member-service:3002 - registration status: 204
+2019-03-24 17:42:33 [http-nio-3002-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -   - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-24 17:42:33 [http-nio-3002-exec-1] INFO  MembmerService -  b390bb7d-be02-4f29-a26e-03f40a5c7c24 - Request Received.
+2019-03-24 17:42:33 [http-nio-3002-exec-1] INFO  MembmerService -  b390bb7d-be02-4f29-a26e-03f40a5c7c24 - Request Completed.
+2019-03-24 17:43:34 [http-nio-3002-exec-2] INFO  MembmerService -  f31831d9-9f13-411e-8862-2567cc92215a - Request Received.
+2019-03-24 17:43:34 [http-nio-3002-exec-2] INFO  MembmerService -  f31831d9-9f13-411e-8862-2567cc92215a - Request Completed.
+2019-03-24 17:43:47 [http-nio-3002-exec-3] INFO  MembmerService -  b570f15c-a6fb-4087-9f14-82ae53ad01fe - Request Received.
+2019-03-24 17:43:47 [http-nio-3002-exec-3] INFO  MembmerService -  b570f15c-a6fb-4087-9f14-82ae53ad01fe - Request Completed.
+2019-03-24 17:44:14 [http-nio-3002-exec-4] INFO  MembmerService -  94136f76-1328-454c-bdf4-32a4427e61b5 - Request Received.
+2019-03-24 17:44:14 [http-nio-3002-exec-4] INFO  MembmerService -  94136f76-1328-454c-bdf4-32a4427e61b5 - Request Completed.
+2019-03-24 17:44:34 [http-nio-3002-exec-5] INFO  MembmerService -  d99a6f22-453d-45de-9815-da4a0b3afedd - Request Received.
+2019-03-24 17:44:34 [http-nio-3002-exec-5] INFO  MembmerService -  d99a6f22-453d-45de-9815-da4a0b3afedd - Request Completed.
+2019-03-24 17:47:30 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver -   - Resolving eureka endpoints via configuration
+2019-03-24 17:51:25 [http-nio-3002-exec-9] INFO  MembmerService -  7573eee9-b678-4b9c-8e98-b6fcbfed7a51 - Request Received.
+2019-03-24 17:51:25 [http-nio-3002-exec-9] INFO  MembmerService -  7573eee9-b678-4b9c-8e98-b6fcbfed7a51 - Request Completed.
+2019-03-24 17:52:30 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver -   - Resolving eureka endpoints via configuration
+2019-03-24 17:55:14 [http-nio-3002-exec-7] INFO  MembmerService -  5e522b99-6d53-42d8-8097-fe3f59e950f0 - Request Received.
+2019-03-24 17:55:14 [http-nio-3002-exec-7] INFO  MembmerService -  5e522b99-6d53-42d8-8097-fe3f59e950f0 - Request Completed.
+2019-03-24 17:55:19 [http-nio-3002-exec-6] INFO  MembmerService -  8716f251-3d93-4457-8569-da17dc429b02 - Request Received.
+2019-03-24 17:55:19 [http-nio-3002-exec-6] INFO  MembmerService -  8716f251-3d93-4457-8569-da17dc429b02 - Request Completed.
+2019-03-24 17:57:30 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver -   - Resolving eureka endpoints via configuration
+2019-03-24 18:02:30 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver -   - Resolving eureka endpoints via configuration
+2019-03-24 18:07:30 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver -   - Resolving eureka endpoints via configuration
+2019-03-24 18:12:30 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver -   - Resolving eureka endpoints via configuration
+2019-03-24 18:17:30 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver -   - Resolving eureka endpoints via configuration
+2019-03-24 18:22:30 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver -   - Resolving eureka endpoints via configuration
+2019-03-24 18:27:30 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver -   - Resolving eureka endpoints via configuration
+2019-03-24 18:32:30 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver -   - Resolving eureka endpoints via configuration
+2019-03-24 18:37:30 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver -   - Resolving eureka endpoints via configuration
+2019-03-24 18:42:30 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver -   - Resolving eureka endpoints via configuration
+2019-03-24 18:47:30 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver -   - Resolving eureka endpoints via configuration
+2019-03-24 19:14:16 [HikariPool-3 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool -   - HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=26m16s929ms971µs367ns).
+2019-03-24 19:18:17 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver -   - Resolving eureka endpoints via configuration
