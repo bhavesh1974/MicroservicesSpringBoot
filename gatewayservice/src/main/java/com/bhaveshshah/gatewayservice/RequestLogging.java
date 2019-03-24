@@ -63,7 +63,6 @@ public class RequestLogging extends ZuulFilter {
 		//Add unique request id to use in the logging
 		String requestId = UUID.randomUUID().toString();
 		context.addZuulRequestHeader("requestid", requestId);
-		
 		logger.info("Request: " + requestId + " - " + request.getRequestURI() + " forwarded.");
 		return null;
 	}

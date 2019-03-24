@@ -15,7 +15,7 @@ public class MemberDaoImpl extends BaseDaoImpl implements MemberDao {
 	@Override
 	public Member get(Integer id) {
 		List<Member> members = this.getJdbcTemplate().query("select * from member where id = ?", new Object[] {id}, new MemberRowMapper());
-		if (members == null) return new Member();
+		if (members.size() == 0) return null;
 		return members.get(0);
 	}
 
